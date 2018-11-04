@@ -37,6 +37,28 @@ namespace PlutoRoverKata
             {
                 return location => location.X -= 1;
             }
+            if (command == Command.Right)
+            {
+                //I think we can do some clever modulo maths to change heading here,
+                //but I've run out of time to implement it
+                return location =>
+                {
+                    location.Heading = location.Heading == Heading.West
+                        ? Heading.North
+                        : location.Heading += 1;
+                };
+            }
+            if (command == Command.Left)
+            {
+                //I think we can do some clever modulo maths to change heading here,
+                //but I've run out of time to implement it
+                return location =>
+                {
+                    location.Heading = location.Heading == Heading.North
+                        ? Heading.West
+                        : location.Heading -= 1;
+                };
+            }
 
             throw new ArgumentOutOfRangeException(nameof(command));
         }

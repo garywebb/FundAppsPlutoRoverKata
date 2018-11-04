@@ -4,6 +4,12 @@ using System.Linq;
 
 namespace PlutoRoverKata
 {
+    /// <summary>
+    /// The main interface for NASA communications. This class is responsible 
+    /// for converting any inputs into actions for use by internal classes.
+    /// And for converting any internal state into NASA readable responses.
+    /// The class also stores the current state of the Rover.
+    /// </summary>
     public class Rover
     {
         private readonly Navigator _navigator;
