@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRoverKata", "PlutoRoverKata\PlutoRoverKata.csproj", "{D9A4C8A4-E57B-4FD8-BFE9-78A0337F9689}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRoverKataTests", "PlutoRoverKataTests\PlutoRoverKataTests.csproj", "{BCBF175C-FFE5-4751-84B5-99B1F16CAFF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9A4C8A4-E57B-4FD8-BFE9-78A0337F9689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9A4C8A4-E57B-4FD8-BFE9-78A0337F9689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9A4C8A4-E57B-4FD8-BFE9-78A0337F9689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9A4C8A4-E57B-4FD8-BFE9-78A0337F9689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCBF175C-FFE5-4751-84B5-99B1F16CAFF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCBF175C-FFE5-4751-84B5-99B1F16CAFF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCBF175C-FFE5-4751-84B5-99B1F16CAFF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCBF175C-FFE5-4751-84B5-99B1F16CAFF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E3F82B7-023B-4684-99B3-ECB11952D6BD}
+	EndGlobalSection
+EndGlobal
