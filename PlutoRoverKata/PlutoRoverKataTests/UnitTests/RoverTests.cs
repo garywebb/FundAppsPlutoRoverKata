@@ -25,7 +25,9 @@ namespace PlutoRoverKataTests.UnitTests
         {
             _rover.Move(command);
 
-            A.CallTo(() => _navigatorFake.GetNavigationSteps(A<List<Command>>.That.IsSameSequenceAs(expectedCommands)))
+            A.CallTo(() => _navigatorFake.GetNavigationSteps(
+                A<List<Command>>.That.IsSameSequenceAs(expectedCommands),
+                A<Heading>.Ignored))
                 .MustHaveHappenedOnceExactly();
         }
     }

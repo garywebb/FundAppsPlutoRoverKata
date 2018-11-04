@@ -44,6 +44,13 @@ namespace PlutoRoverKataTests.IntegrationTests
         public IEnumerator<object[]> GetEnumerator()
         {
             yield return new object[] { 0, 0, Heading.North, "F", 0, 1, Heading.North };
+            yield return new object[] { 0, 0, Heading.East, "F", 1, 0, Heading.East };
+            yield return new object[] { 0, 1, Heading.South, "F", 0, 0, Heading.South };
+            yield return new object[] { 1, 0, Heading.West, "F", 0, 0, Heading.West };
+            yield return new object[] { 0, 1, Heading.North, "B", 0, 0, Heading.North };
+            yield return new object[] { 1, 0, Heading.East, "B", 0, 0, Heading.East };
+            yield return new object[] { 0, 0, Heading.South, "B", 0, 1, Heading.South };
+            yield return new object[] { 0, 0, Heading.West, "B", 1, 0, Heading.West };
         }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

@@ -20,7 +20,7 @@ namespace PlutoRoverKata
         public void Move(string command)
         {
             var commands = Parse(command).ToList();
-            foreach (var navigationStep in _navigator.GetNavigationSteps(commands))
+            foreach (var navigationStep in _navigator.GetNavigationSteps(commands, currentHeading: Location.Heading))
             {
                 navigationStep(Location);
             }
