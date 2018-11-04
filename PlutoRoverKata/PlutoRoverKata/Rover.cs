@@ -11,13 +11,22 @@ namespace PlutoRoverKata
         public Rover(Navigator navigator)
         {
             _navigator = navigator;
+            Location = new RoverLocation { X = 0, Y = 0, Heading = Heading.North };
         }
+
+        //Exposed for testing purposes only
+        public RoverLocation Location { get; private set; }
 
         public void Move(string command)
         {
             var commands = Parse(command).ToList();
-            _navigator.Navigate(commands);
+            foreach (var navigationStep in _navigator.GetNavigationSteps(commands))
+            {
+                navigationStep(Location);
+            }
         }
+
+        #region Private Methods
 
         private IEnumerable<Command> Parse(string commandString)
         {
@@ -42,5 +51,7 @@ namespace PlutoRoverKata
                 }
             }
         }
+
+        #endregion
     }
 }

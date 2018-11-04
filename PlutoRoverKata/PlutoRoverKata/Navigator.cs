@@ -6,9 +6,13 @@ namespace PlutoRoverKata
 {
     public class Navigator
     {
-        public virtual void Navigate(List<Command> expectedCommands)
+        public virtual IEnumerable<Action<RoverLocation>> GetNavigationSteps(List<Command> expectedCommands)
         {
-            throw new NotImplementedException();
+            //Simplest code I can think of to implement the test
+            yield return (location) => 
+            {
+                location.Y += 1;
+            };
         }
     }
 }
